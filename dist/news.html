@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/main.min.css" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .container {
+        width: 600px;
+        margin: auto;
+        margin-top: 60px;
+      }
+      tr,
+      th,
+      td {
+        /* border: 1px solid #000; */
+        padding: 5px;
+      }
+      #news-showcase {
+        width: 100%;
+        text-align: center;
+      }
+      #news-showcase tbody tr:nth-child(even) {
+        background-color: #ccc;
+      }
+      #news-showcase tbody tr:nth-child(odd) {
+        background-color: #aaa;
+      }
+      #news-showcase tbody tr:hover {
+        background-color: #f4f4f4;
+      }
+      #news-showcase a {
+        color: #333;
+      }
+
+      /* #news-showcase {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #news-showcase li {
+        padding: 10px;
+        display: flex;
+
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <table id="news-showcase">
+        <thead>
+          <tr>
+            <th>文章標題</th>
+            <th>作者</th>
+            <th>添加日期</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#">Hikari 高夠力 熱帶魚蟲型飼料（73g</a></td>
+            <td><p>admin</p></td>
+            <td><p>2020-06-19</p></td>
+          </tr>
+          <tr>
+            <td><a href="#">Hikari 高夠力 熱帶魚蟲型飼料（73g</a></td>
+            <td><p>admin</p></td>
+            <td><p>2020-06-19</p></td>
+          </tr>
+          <tr>
+            <td><a href="#">Hikari 高夠力 熱帶魚蟲型飼料（73g</a></td>
+            <td><p>admin</p></td>
+            <td><p>2020-06-19</p></td>
+          </tr>
+          <tr>
+            <td><a href="#">Hikari 高夠力 熱帶魚蟲型飼料（73g</a></td>
+            <td><p>admin</p></td>
+            <td><p>2020-06-19</p></td>
+          </tr>
+          <tr>
+            <td><a href="#">Hikari 高夠力 熱帶魚蟲型飼料（73g</a></td>
+            <td><p>admin</p></td>
+            <td><p>2020-06-19</p></td>
+          </tr>
+          <tr>
+            <td><a href="#">Hikari 高夠力 熱帶魚蟲型飼料（73g</a></td>
+            <td><p>admin</p></td>
+            <td><p>2020-06-19</p></td>
+          </tr>
+          <tr>
+            <td><a href="#">Hikari 高夠力 熱帶魚蟲型飼料（73g</a></td>
+            <td><p>admin</p></td>
+            <td><p>2020-06-19</p></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
