@@ -83,7 +83,6 @@
         width: 40px;
         height: 20px;
         border-radius: 8px;
-        background-color: #007395;
         z-index: -2;
       }
       .item .corner-ribbons::after {
@@ -95,35 +94,45 @@
         height: 20px;
         border-radius: 8px;
         transform: rotate(90deg);
-        background-color: #007395;
         z-index: -2;
       }
-      .item .corner-ribbons .hot {
+      .item .corner-ribbons.hot::before,
+      .item .corner-ribbons.hot::after {
+        background-color: #007395;
+      }
+      .item .corner-ribbons.new::before,
+      .item .corner-ribbons.new::after {
+        background-color: #119200;
+      }
+
+      .item .corner-ribbons .wrap {
         position: absolute;
         top: 15px;
         left: -30px;
         width: 120px;
         height: 30px;
-
         /* border: 1px dashed; */
         text-align: center;
         line-height: 30px;
-        color: #0292be;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bold;
         transform: rotate(-45deg);
-
-        background-image: linear-gradient(90deg, #ddd, #62b6cb);
-
-        /* background-color: #aaf; */
+      }
+      .item .corner-ribbons.hot .wrap {
+        background-image: linear-gradient(90deg, #eee, #62b6cb);
+        color: #0292be;
+      }
+      .item .corner-ribbons.new .wrap {
+        background-image: linear-gradient(90deg, #eee, #82f888);
+        color: #18be02;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="item">
-        <div class="corner-ribbons">
-          <div class="hot">
+        <div class="corner-ribbons hot">
+          <div class="wrap">
             <span>熱銷</span>
           </div>
         </div>
@@ -139,8 +148,8 @@
         </button>
       </div>
       <div class="item">
-        <div class="corner-ribbons">
-          <div class="hot">
+        <div class="corner-ribbons new">
+          <div class="wrap">
             <span>熱銷</span>
           </div>
         </div>
