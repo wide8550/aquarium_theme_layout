@@ -20,12 +20,13 @@
         box-sizing: border-box;
         width: 200px;
         padding: 20px;
-        background-color: rgb(2, 146, 190);
+        background-color: #0292be;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
         margin: 10px;
+        position: relative;
       }
       .item .pic,
       .item .txt {
@@ -63,11 +64,69 @@
         width: 100%;
         padding: 5px 0;
       }
+
+      /*  corner ribbon */
+      .item .corner-ribbons {
+        position: absolute;
+        left: -5px;
+        top: -5px;
+        width: 100px;
+        height: 100px;
+        background-color: transparent;
+        overflow: hidden;
+      }
+      .item .corner-ribbons::before {
+        position: absolute;
+        content: '';
+        top: -3px;
+        left: 45px;
+        width: 40px;
+        height: 20px;
+        border-radius: 8px;
+        background-color: #007395;
+        z-index: -2;
+      }
+      .item .corner-ribbons::after {
+        position: absolute;
+        content: '';
+        top: 55px;
+        left: -10px;
+        width: 40px;
+        height: 20px;
+        border-radius: 8px;
+        transform: rotate(90deg);
+        background-color: #007395;
+        z-index: -2;
+      }
+      .item .corner-ribbons .hot {
+        position: absolute;
+        top: 15px;
+        left: -30px;
+        width: 120px;
+        height: 30px;
+
+        /* border: 1px dashed; */
+        text-align: center;
+        line-height: 30px;
+        color: #0292be;
+        font-size: 20px;
+        font-weight: bold;
+        transform: rotate(-45deg);
+
+        background-image: linear-gradient(90deg, #ddd, #62b6cb);
+
+        /* background-color: #aaf; */
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="item">
+        <div class="corner-ribbons">
+          <div class="hot">
+            <span>熱銷</span>
+          </div>
+        </div>
         <div class="pic">
           <img src="https://picsum.photos/150/150?random=1" alt="" />
         </div>
@@ -80,6 +139,11 @@
         </button>
       </div>
       <div class="item">
+        <div class="corner-ribbons">
+          <div class="hot">
+            <span>熱銷</span>
+          </div>
+        </div>
         <div class="pic">
           <img src="https://picsum.photos/150/150?random=2" alt="" />
         </div>
